@@ -16,7 +16,7 @@ class CameraVC: UIViewController {
     var captureSession: AVCaptureSession!
     var cameraOutput: AVCapturePhotoOutput!
     var previewLayer: AVCaptureVideoPreviewLayer!
-    
+    var photoData: Data?
     
     
     @IBOutlet weak var captureImgview: RoundedImageView!
@@ -38,9 +38,13 @@ class CameraVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapCameraView))
+        tap.numberOfTapsRequired = 1
+        
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = AVCaptureSession.Preset.hd1920x1080
-        
         
         let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
         
@@ -67,7 +71,48 @@ class CameraVC: UIViewController {
             debugPrint(error)
         }
     }
+    
+    @objc func didTapCameraView() {
+        
+        self.cameraView.isUserInteractionEnabled = false
+        let settings = AVCapturePhotoSettings()
+        settings.previewPhotoFormat = settings.embeddedThumbnailPhotoFormat
+        
+        cameraOutput.capturePhoto(with: settings, delegate: self)
+    }
 }
+
+
+extension CameraVC: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let error = error {
+            debugPrint(error)
+        }else{
+         photoData = photo.fileDataRepresentation()
+        
+            let image = UIImage(data: photoData!)
+            self.captureImgview.image = image
+            
+        }
+        
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
