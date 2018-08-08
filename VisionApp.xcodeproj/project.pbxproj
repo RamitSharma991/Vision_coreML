@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312EA6FF211AC49000B9DC35 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312EA6FE211AC49000B9DC35 /* RoundedShadowView.swift */; };
+		312EA701211AC87900B9DC35 /* RoundedButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312EA700211AC87900B9DC35 /* RoundedButtons.swift */; };
+		312EA703211AC8E700B9DC35 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312EA702211AC8E700B9DC35 /* RoundedImageView.swift */; };
 		3154A340211821CA0079B118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154A33F211821CA0079B118 /* AppDelegate.swift */; };
-		3154A342211821CA0079B118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154A341211821CA0079B118 /* ViewController.swift */; };
 		3154A345211821CA0079B118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3154A343211821CA0079B118 /* Main.storyboard */; };
 		3154A348211821CA0079B118 /* VisionApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3154A346211821CA0079B118 /* VisionApp.xcdatamodeld */; };
 		3154A34A211821CC0079B118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3154A349211821CC0079B118 /* Assets.xcassets */; };
 		3154A34D211821CC0079B118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3154A34B211821CC0079B118 /* LaunchScreen.storyboard */; };
 		3154A358211821CD0079B118 /* VisionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154A357211821CD0079B118 /* VisionAppTests.swift */; };
 		3154A363211821CD0079B118 /* VisionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154A362211821CD0079B118 /* VisionAppUITests.swift */; };
+		31C7A0BB21182C3F009571E8 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7A0BA21182C3F009571E8 /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		312EA6FE211AC49000B9DC35 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		312EA700211AC87900B9DC35 /* RoundedButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtons.swift; sourceTree = "<group>"; };
+		312EA702211AC8E700B9DC35 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		3154A33C211821CA0079B118 /* VisionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3154A33F211821CA0079B118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3154A341211821CA0079B118 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3154A344211821CA0079B118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3154A347211821CA0079B118 /* VisionApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VisionApp.xcdatamodel; sourceTree = "<group>"; };
 		3154A349211821CC0079B118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		3154A35E211821CD0079B118 /* VisionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3154A362211821CD0079B118 /* VisionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAppUITests.swift; sourceTree = "<group>"; };
 		3154A364211821CD0079B118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31C7A0BA21182C3F009571E8 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +105,10 @@
 		3154A33E211821CA0079B118 /* VisionApp */ = {
 			isa = PBXGroup;
 			children = (
+				31C7A0B921182BD3009571E8 /* Resources */,
+				31C7A0B821182BCB009571E8 /* View */,
+				31C7A0B721182BB6009571E8 /* Controller */,
 				3154A33F211821CA0079B118 /* AppDelegate.swift */,
-				3154A341211821CA0079B118 /* ViewController.swift */,
 				3154A343211821CA0079B118 /* Main.storyboard */,
 				3154A349211821CC0079B118 /* Assets.xcassets */,
 				3154A34B211821CC0079B118 /* LaunchScreen.storyboard */,
@@ -126,6 +134,31 @@
 				3154A364211821CD0079B118 /* Info.plist */,
 			);
 			path = VisionAppUITests;
+			sourceTree = "<group>";
+		};
+		31C7A0B721182BB6009571E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				31C7A0BA21182C3F009571E8 /* CameraVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		31C7A0B821182BCB009571E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				312EA6FE211AC49000B9DC35 /* RoundedShadowView.swift */,
+				312EA700211AC87900B9DC35 /* RoundedButtons.swift */,
+				312EA702211AC8E700B9DC35 /* RoundedImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31C7A0B921182BD3009571E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3154A342211821CA0079B118 /* ViewController.swift in Sources */,
+				312EA6FF211AC49000B9DC35 /* RoundedShadowView.swift in Sources */,
+				312EA701211AC87900B9DC35 /* RoundedButtons.swift in Sources */,
+				312EA703211AC8E700B9DC35 /* RoundedImageView.swift in Sources */,
 				3154A340211821CA0079B118 /* AppDelegate.swift in Sources */,
+				31C7A0BB21182C3F009571E8 /* CameraVC.swift in Sources */,
 				3154A348211821CA0079B118 /* VisionApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+import CoreML
+class CameraVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
