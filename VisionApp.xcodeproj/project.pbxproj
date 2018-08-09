@@ -17,6 +17,7 @@
 		3154A34D211821CC0079B118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3154A34B211821CC0079B118 /* LaunchScreen.storyboard */; };
 		3154A358211821CD0079B118 /* VisionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154A357211821CD0079B118 /* VisionAppTests.swift */; };
 		3154A363211821CD0079B118 /* VisionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3154A362211821CD0079B118 /* VisionAppUITests.swift */; };
+		3177B77F211BFA8D00404D34 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3177B77E211BFA8D00404D34 /* SqueezeNet.mlmodel */; };
 		31C7A0BB21182C3F009571E8 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C7A0BA21182C3F009571E8 /* CameraVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		3154A35E211821CD0079B118 /* VisionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3154A362211821CD0079B118 /* VisionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionAppUITests.swift; sourceTree = "<group>"; };
 		3154A364211821CD0079B118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3177B77E211BFA8D00404D34 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		31C7A0BA21182C3F009571E8 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 		31C7A0B921182BD3009571E8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3177B77E211BFA8D00404D34 /* SqueezeNet.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				312EA6FF211AC49000B9DC35 /* RoundedShadowView.swift in Sources */,
 				312EA701211AC87900B9DC35 /* RoundedButtons.swift in Sources */,
 				312EA703211AC8E700B9DC35 /* RoundedImageView.swift in Sources */,
+				3177B77F211BFA8D00404D34 /* SqueezeNet.mlmodel in Sources */,
 				3154A340211821CA0079B118 /* AppDelegate.swift in Sources */,
 				31C7A0BB21182C3F009571E8 /* CameraVC.swift in Sources */,
 				3154A348211821CA0079B118 /* VisionApp.xcdatamodeld in Sources */,

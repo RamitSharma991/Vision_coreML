@@ -8,10 +8,12 @@
 
 import UIKit
 import AVFoundation
+import CoreML
+import Vision
 
 class CameraVC: UIViewController {
-
-//Outlets
+    
+    //Outlets
     
     var captureSession: AVCaptureSession!
     var cameraOutput: AVCapturePhotoOutput!
@@ -35,7 +37,7 @@ class CameraVC: UIViewController {
         super.viewDidAppear(animated)
         previewLayer.frame = cameraView.bounds
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -80,6 +82,25 @@ class CameraVC: UIViewController {
         
         cameraOutput.capturePhoto(with: settings, delegate: self)
     }
+    
+    func resultsMethod(request: VNRequest, error: Error?) {
+        //change lbl txt
+        
+        guard let results = request.results as? [VNClassificationObservation] else {return}
+        
+        for classification in results {
+            
+            if classification.confidence < 0.5 {
+                self.identificationLbl.text = "Not sure about this. Try again"
+                self.confidenceLbl.text = ""
+                break
+            } else {
+                self.identificationLbl.text = classification.identifier
+                self.confidenceLbl.text = "CONFIDENCE: \(Int(classification.confidence * 100))%"
+                break
+            }
+        }
+    }
 }
 
 
@@ -88,8 +109,18 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
         if let error = error {
             debugPrint(error)
         }else{
-         photoData = photo.fileDataRepresentation()
-        
+            photoData = photo.fileDataRepresentation()
+            
+            do {
+                let model = try VNCoreMLModel(for: SqueezeNet().model)
+                let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)
+                let handler = VNImageRequestHandler(data: photoData!)
+                
+                try handler.perform([request])
+            } catch {
+                debugPrint(error)
+            }
+            
             let image = UIImage(data: photoData!)
             self.captureImgview.image = image
             
