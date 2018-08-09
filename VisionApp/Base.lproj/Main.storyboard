@@ -65,6 +65,9 @@
                                 <state key="normal" title="Flash Off">
                                     <color key="titleColor" red="0.84564280510000001" green="0.27269187569999997" blue="0.1195143238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="flashBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fp-Tb-uNm"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Wr-agE" customClass="RoundedImageView" customModule="VisionApp" customModuleProvider="target">
                                 <rect key="frame" x="280" y="497" width="75" height="140"/>
@@ -73,6 +76,9 @@
                                     <constraint firstAttribute="height" constant="140" id="SXh-Aj-nB6"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Ydu-NL-D0l">
+                                <rect key="frame" x="307" y="557" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,7 +91,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ENB-of-2c7" secondAttribute="bottom" constant="30" id="VkD-iN-zK8"/>
                             <constraint firstItem="ENB-of-2c7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vm7-ab-LMq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bpk-in-L62" secondAttribute="bottom" id="Vov-ZT-pZ7"/>
+                            <constraint firstItem="Ydu-NL-D0l" firstAttribute="centerY" secondItem="j5r-Wr-agE" secondAttribute="centerY" id="Vv2-u5-1sn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j5r-Wr-agE" secondAttribute="bottom" constant="30" id="aOL-tu-2LZ"/>
+                            <constraint firstItem="Ydu-NL-D0l" firstAttribute="centerX" secondItem="j5r-Wr-agE" secondAttribute="centerX" id="e3k-PW-hgP"/>
                             <constraint firstItem="bpk-in-L62" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oQ9-JX-MNF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -97,6 +105,7 @@
                         <outlet property="flashOutlet" destination="ENB-of-2c7" id="4Es-KI-o49"/>
                         <outlet property="identificationLbl" destination="7WT-5F-J5m" id="Xpd-sj-qHm"/>
                         <outlet property="roundedLblView" destination="6PH-AH-H2u" id="2nC-tp-Mbz"/>
+                        <outlet property="spinner" destination="Ydu-NL-D0l" id="tyZ-Ch-UVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
