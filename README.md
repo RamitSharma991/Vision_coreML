@@ -4,5 +4,4 @@
 </p>
 
 Things used and learnt:
-
 -CoreML 
