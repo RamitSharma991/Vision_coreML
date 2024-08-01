@@ -7,5 +7,4 @@
 
 Things used and learnt
 
-
 - CoreML 
